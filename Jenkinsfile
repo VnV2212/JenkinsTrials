@@ -22,7 +22,7 @@ pipeline{
         stage("test"){
             steps{
                 echo "testing app"
-                echo "vchoice is ${params.choice}"
+                echo "vchoice is ${params.vchoice}"
             }
         }
 
