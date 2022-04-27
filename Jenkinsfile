@@ -4,6 +4,10 @@ pipeline{
         NEW_VERSION = '2.3.0'
     }
     
+    parameters{
+        choice(name: 'vchoice', choices: ['1','2','3'])
+    }
+
     agent any
 
     stages{
@@ -18,6 +22,7 @@ pipeline{
         stage("test"){
             steps{
                 echo "testing app"
+                echo "vchoice is ${params.choice}"
             }
         }
 
